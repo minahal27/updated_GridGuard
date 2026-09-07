@@ -1,0 +1,105 @@
+/*
+  GridGuard design tokens.
+
+  Palette rationale (see this project's design brief):
+  - Dark "substation at night" base - a control-room choice, matching how
+    utility SCADA/monitoring rooms are actually lit.
+  - Copper accent: the literal material of power infrastructure - and what
+    theft targets. Used for brand, primary actions, and the risk-gauge needle.
+  - Cyan "telemetry trace": an oscilloscope/live-signal color, used for
+    positive/normal status and active states.
+  - Risk-tier colors (cyan/amber/red) are functional, not decorative - they
+    always mean Low/Medium/High and nothing else, everywhere in the app.
+*/
+:root {
+  /* Surfaces */
+  --bg-void: #0a1412;
+  --bg-panel: #0f1c19;
+  --bg-panel-raised: #15251f;
+  --bg-panel-hover: #1a2c25;
+  --hairline: rgba(148, 178, 168, 0.14);
+  --hairline-strong: rgba(148, 178, 168, 0.26);
+
+  /* Brand / accent */
+  --copper: #c97c3d;
+  --copper-bright: #e2984f;
+  --copper-dim: rgba(201, 124, 61, 0.16);
+  --cyan: #49d3c0;
+  --cyan-dim: rgba(73, 211, 192, 0.14);
+
+  /* Risk tiers - functional color, used only for risk semantics */
+  --risk-low: #49d3c0;
+  --risk-low-bg: rgba(73, 211, 192, 0.12);
+  --risk-medium: #e8b34c;
+  --risk-medium-bg: rgba(232, 179, 76, 0.14);
+  --risk-high: #e5484d;
+  --risk-high-bg: rgba(229, 72, 77, 0.14);
+
+  /* Text */
+  --text-hi: #edf3f0;
+  --text-mid: #9fb6ae;
+  --text-dim: #61776f;
+
+  /* Type */
+  --font-display: "Space Grotesk", ui-sans-serif, sans-serif;
+  --font-body: "Inter", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Spacing scale */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-panel: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 12px 24px -12px rgba(0, 0, 0, 0.5);
+
+  /* Component specific dynamic backgrounds */
+  --bg-topbar: rgba(15, 28, 25, 0.6);
+  --bg-status-chip: rgba(15, 25, 22, 0.35);
+  --btn-primary-text: #14100b;
+}
+
+/*
+  Light theme override.
+*/
+:root[data-theme="light"] {
+  --bg-void: #f0f4f8; /* Fresh light grey-blue */
+  --bg-panel: #ffffff;
+  --bg-panel-raised: #f8fafc;
+  --bg-panel-hover: #f1f5f9;
+  --hairline: rgba(0, 0, 0, 0.08);
+  --hairline-strong: rgba(0, 0, 0, 0.15);
+
+  --copper: #e85d04;
+  --copper-bright: #f48c06;
+  --copper-dim: rgba(232, 93, 4, 0.12);
+  --cyan: #00b4d8;
+  --cyan-dim: rgba(0, 180, 216, 0.12);
+
+  --risk-low: #10b981;
+  --risk-low-bg: rgba(16, 185, 129, 0.12);
+  --risk-medium: #f59e0b;
+  --risk-medium-bg: rgba(245, 158, 11, 0.15);
+  --risk-high: #ef4444;
+  --risk-high-bg: rgba(239, 68, 68, 0.12);
+
+  --text-hi: #0f172a;
+  --text-mid: #475569;
+  --text-dim: #94a3b8;
+
+  --shadow-panel: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+
+  /* Component specific dynamic backgrounds */
+  --bg-topbar: rgba(255, 255, 255, 0.75);
+  --bg-status-chip: rgba(255, 255, 255, 0.6);
+  --btn-primary-text: #ffffff;
+}
