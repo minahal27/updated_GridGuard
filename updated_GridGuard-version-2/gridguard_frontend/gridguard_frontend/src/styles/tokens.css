@@ -1,0 +1,182 @@
+/*
+  GridGuard Liquid Glass Design Tokens
+  High-Contrast Depth Architecture:
+  - Dark Mode: Deep Midnight Void background with Crisp Sapphire/Obsidian glass panels (solid readability, 0.88 opacity, specular rim lighting, vibrant red & cyan accents).
+  - Light Mode: Warm Pearl/Crimson-tinted background with Pure Opaque Porcelain White glass panels (0.94 opacity, crisp borders, dark text, ruby red accents).
+*/
+:root {
+  /* DARK THEME: Midnight Cyber Void with High-Contrast Sapphire Glass */
+  --bg-void: #01040a;
+  --bg-panel: rgba(13, 24, 48, 0.88);
+  --bg-panel-raised: rgba(18, 34, 68, 0.92);
+  --bg-panel-hover: rgba(26, 48, 92, 0.95);
+  --bg-panel-deep: #081226;
+
+  /* Crisp Specular Liquid Glass Borders - Sharp separation from background */
+  --hairline: rgba(56, 189, 248, 0.28);
+  --hairline-strong: rgba(56, 189, 248, 0.5);
+  --hairline-glow: rgba(56, 189, 248, 0.7);
+
+  /* Blue Neon Accents (Primary Flow) */
+  --blue-liquid: #38bdf8;
+  --blue-liquid-bright: #7dd3fc;
+  --blue-liquid-dim: rgba(56, 189, 248, 0.18);
+  --blue-liquid-deep: #0284c7;
+  --blue-glow: 0 0 20px rgba(56, 189, 248, 0.45);
+
+  /* Red Liquid Accents (Secondary & Anomaly/Alert Energy) */
+  --red-liquid: #ff2a55;
+  --red-liquid-bright: #ff5c7a;
+  --red-liquid-dim: rgba(255, 42, 85, 0.2);
+  --red-liquid-deep: #e11d48;
+  --red-glow: 0 0 22px rgba(255, 42, 85, 0.55);
+
+  /* Brand mappings */
+  --copper: #38bdf8;
+  --copper-bright: #7dd3fc;
+  --copper-dim: rgba(56, 189, 248, 0.2);
+  --cyan: #38bdf8;
+  --cyan-bright: #7dd3fc;
+  --cyan-dim: rgba(56, 189, 248, 0.18);
+  --cyan-glow: 0 0 16px rgba(56, 189, 248, 0.5);
+
+  /* Risk tiers - functional colors with glowing liquid glass tints */
+  --risk-low: #38bdf8;
+  --risk-low-bg: rgba(56, 189, 248, 0.16);
+  --risk-low-border: rgba(56, 189, 248, 0.45);
+
+  --risk-medium: #fb923c;
+  --risk-medium-bg: rgba(251, 146, 60, 0.16);
+  --risk-medium-border: rgba(251, 146, 60, 0.45);
+
+  --risk-high: #ff2a55;
+  --risk-high-bg: rgba(255, 42, 85, 0.2);
+  --risk-high-border: rgba(255, 42, 85, 0.55);
+
+  /* Crisp Text colors */
+  --text-hi: #ffffff;
+  --text-mid: #cbd5e1;
+  --text-dim: #94a3b8;
+
+  /* Typography */
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+
+  /* Border radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+
+  /* Multi-layered Liquid Glass Shadows & Specular Edge Reflections */
+  --shadow-panel: 
+    0 1.5px 0 0 rgba(255, 255, 255, 0.35) inset,
+    0 -1px 2px 0 rgba(0, 0, 0, 0.5) inset,
+    0 24px 55px -12px rgba(0, 0, 0, 0.95),
+    0 0 1px 1px rgba(56, 189, 248, 0.25);
+
+  --shadow-panel-hover:
+    0 2px 1px 0 rgba(255, 255, 255, 0.5) inset,
+    0 28px 65px -12px rgba(0, 0, 0, 1),
+    0 0 35px rgba(56, 189, 248, 0.35),
+    0 0 1px 1px rgba(56, 189, 248, 0.6);
+
+  --shadow-card:
+    0 1.5px 0 0 rgba(255, 255, 255, 0.3) inset,
+    0 16px 36px -8px rgba(0, 0, 0, 0.9),
+    0 0 1px 1px rgba(56, 189, 248, 0.2);
+
+  --glass-blur: blur(28px);
+  --glass-saturate: saturate(210%);
+
+  /* Navigation & chips */
+  --bg-topbar: rgba(6, 15, 34, 0.9);
+  --bg-status-chip: rgba(56, 189, 248, 0.14);
+  --btn-primary-text: #ffffff;
+}
+
+/*
+  LIGHT THEME: Pearl-Rose Ambient Backdrop with Solid Pure Porcelain Glass
+  Solves background/card blending with opaque 0.94 milk glass surfaces and dark charcoal text.
+*/
+:root[data-theme="light"] {
+  --bg-void: #f5ecec;
+  --bg-panel: rgba(255, 255, 255, 0.94);
+  --bg-panel-raised: rgba(255, 255, 255, 0.98);
+  --bg-panel-hover: #ffffff;
+  --bg-panel-deep: #f8fafc;
+
+  /* Crisp Crimson/Slate Glass Borders */
+  --hairline: rgba(225, 29, 72, 0.22);
+  --hairline-strong: rgba(225, 29, 72, 0.45);
+  --hairline-glow: rgba(225, 29, 72, 0.6);
+
+  /* Liquid White & Crimson Red Accents */
+  --blue-liquid: #e11d48;
+  --blue-liquid-bright: #f43f5e;
+  --blue-liquid-dim: rgba(225, 29, 72, 0.12);
+  --blue-liquid-deep: #be123c;
+  --blue-glow: 0 0 18px rgba(225, 29, 72, 0.35);
+
+  --red-liquid: #e11d48;
+  --red-liquid-bright: #f43f5e;
+  --red-liquid-dim: rgba(225, 29, 72, 0.14);
+  --red-liquid-deep: #be123c;
+  --red-glow: 0 0 20px rgba(225, 29, 72, 0.4);
+
+  --copper: #e11d48;
+  --copper-bright: #f43f5e;
+  --copper-dim: rgba(225, 29, 72, 0.14);
+  --cyan: #e11d48;
+  --cyan-bright: #f43f5e;
+  --cyan-dim: rgba(225, 29, 72, 0.12);
+  --cyan-glow: 0 0 16px rgba(225, 29, 72, 0.35);
+
+  --risk-low: #0284c7;
+  --risk-low-bg: rgba(2, 132, 199, 0.12);
+  --risk-low-border: rgba(2, 132, 199, 0.35);
+
+  --risk-medium: #ea580c;
+  --risk-medium-bg: rgba(234, 88, 12, 0.12);
+  --risk-medium-border: rgba(234, 88, 12, 0.35);
+
+  --risk-high: #e11d48;
+  --risk-high-bg: rgba(225, 29, 72, 0.14);
+  --risk-high-border: rgba(225, 29, 72, 0.45);
+
+  --text-hi: #090d16;
+  --text-mid: #334155;
+  --text-dim: #64748b;
+
+  --shadow-panel:
+    0 2px 0 0 rgba(255, 255, 255, 1) inset,
+    0 -1px 2px 0 rgba(225, 29, 72, 0.08) inset,
+    0 22px 45px -10px rgba(136, 19, 55, 0.18),
+    0 0 0 1.5px rgba(255, 255, 255, 0.95);
+
+  --shadow-panel-hover:
+    0 2px 0 0 rgba(255, 255, 255, 1) inset,
+    0 26px 54px -10px rgba(136, 19, 55, 0.28),
+    0 0 28px rgba(225, 29, 72, 0.22),
+    0 0 0 2px rgba(225, 29, 72, 0.4);
+
+  --shadow-card:
+    0 2px 0 0 rgba(255, 255, 255, 1) inset,
+    0 12px 28px -6px rgba(136, 19, 55, 0.14),
+    0 0 0 1px rgba(255, 255, 255, 0.95);
+
+  --bg-topbar: rgba(255, 255, 255, 0.94);
+  --bg-status-chip: rgba(225, 29, 72, 0.1);
+  --btn-primary-text: #ffffff;
+}

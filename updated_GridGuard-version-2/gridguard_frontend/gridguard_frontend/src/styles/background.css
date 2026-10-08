@@ -1,0 +1,46 @@
+/*
+  Steady High-Definition Cybernetic Background Styling
+  Zero blinking or jarring flashes, smooth steady glass ambiance.
+*/
+
+.animated-bg-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: var(--bg-void);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Photorealistic smart grid infrastructure composite layer with clean liquid glass blend */
+.smart-grid-photo-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/bg-smart-grid.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+  filter: saturate(140%) contrast(120%);
+  mix-blend-mode: luminosity;
+  transition: opacity 0.5s ease;
+}
+
+:root[data-theme="light"] .smart-grid-photo-layer {
+  opacity: 0.16;
+  filter: grayscale(25%) contrast(110%);
+  mix-blend-mode: multiply;
+}
+
+.electricity-grid-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
